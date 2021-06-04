@@ -38,8 +38,7 @@ class YouTubeAPI:
         self.find_videos()
 
         for video in self.repositorie:
-            print(f'\n{video[6:-13]}')
-            print(f'This video has been uploaded {video[-12:]}!')
+            print(f'\n{video[6:]}')
 
     def find_videos(self):
         try:
