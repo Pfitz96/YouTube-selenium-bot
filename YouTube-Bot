@@ -1,5 +1,6 @@
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
+import time
 from Selenium_config import (
     get_chrome_web_driver,
     get_chrome_options,
@@ -45,6 +46,7 @@ class YouTubeAPI:
     def find_videos(self):
         try:
             for i in range(1, 6):
+                time.sleep(1)
                 new_ones = self.driver.find_element_by_xpath('//*[@id="items"]/ytd-grid-video-renderer[' + str(i) + ']')
                 self.repositorie.append(new_ones.text)
 
