@@ -39,7 +39,7 @@ class YouTubeAPI:
 
         for video in self.repositorie:
             print(f'\n{video[6:]}')
-        
+
         self.tearDown()
 
     def find_videos(self):
@@ -50,9 +50,10 @@ class YouTubeAPI:
 
         except NoSuchElementException as e:
             print(e)
-    
+
     def tearDown(self):
         self.driver.quit()
+
 
 
 if __name__ == "__main__":
